@@ -1,6 +1,9 @@
 import { parseAcceptLanguage } from "intl-parse-accept-language";
 export function getClientLocales(requestOrHeaders) {
     let headers = getHeaders(requestOrHeaders);
+    // console.trace
+    console.log('Troubleshooting request type');
+    console.trace(requestOrHeaders);
     let acceptLanguage = headers.get("Accept-Language");
     // if the header is not defined, return undefined
     if (!acceptLanguage)

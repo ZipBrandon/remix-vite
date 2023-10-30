@@ -22,6 +22,9 @@ export function getClientLocales(request: Request): Locales;
 export function getClientLocales(requestOrHeaders: Request | Headers): Locales {
   let headers = getHeaders(requestOrHeaders);
 
+  // console.trace
+  console.log('Troubleshooting request type')
+  console.trace(requestOrHeaders)
   let acceptLanguage = headers.get("Accept-Language");
 
   // if the header is not defined, return undefined

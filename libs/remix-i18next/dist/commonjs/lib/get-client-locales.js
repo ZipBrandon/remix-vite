@@ -4,6 +4,9 @@ exports.getClientLocales = void 0;
 const intl_parse_accept_language_1 = require("intl-parse-accept-language");
 function getClientLocales(requestOrHeaders) {
     let headers = getHeaders(requestOrHeaders);
+    // console.trace
+    console.log('Troubleshooting request type');
+    console.trace(requestOrHeaders);
     let acceptLanguage = headers.get("Accept-Language");
     // if the header is not defined, return undefined
     if (!acceptLanguage)
