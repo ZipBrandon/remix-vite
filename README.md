@@ -1,3 +1,9 @@
+# Troubleshooting:  NodeRequest type for the request. 
+The request type has deviated.  Code that expects headers to have .get() on it is breaking.
+This code is using `remix-i18next` which parses the header to figure out the locale. This repo uses a fork for a PR https://github.com/sergiodxa/remix-i18next/pull/155 because Vite does not like how the main line package is assembled for ESM.
+
+
+
 # remix-template-vite
 
 ⚠️ Remix support for Vite is unstable and not recommended for production.
